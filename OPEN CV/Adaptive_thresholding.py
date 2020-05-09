@@ -10,5 +10,11 @@ th_3 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRES
 cv2.imshow("Simple_threshold", th_1)
 cv2.imshow("Adaptive_mean_c", th_2)
 cv2.imshow("Adaptive_gaussian_c",th_3)
+
+#or also by concating horizontally
+
+final_frame =cv2.hconcat([th_1,th_2,th_3])
+cv2.imshow("Adaptive_Thresholding 1.Simple_threshold, 2.Ad_mean_c, 3.Ad_gaussian_c", final_frame)
+ 
 cv2.waitKey()
 cv2.destroyWindow()
